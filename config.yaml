@@ -1,0 +1,57 @@
+baseURL: 'https://mdubiel.github.io/'
+theme: "xmin"
+copyright: "Copyright © 2025, Mateusz Dubiel."
+defaultContentLanguage: "en"
+
+# Generate a nice robots.txt for SEO
+enableRobotsTXT: true
+enableInlineShortcodes: true
+footnoteReturnLinkContents: "^"
+### xmin
+googleAnalytics: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents:  "↩"
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "&copy; [Mateusz Dubiel](https://mdubiel.github.io/) 2024 -- {Year} | [Github](https://github.com/mdubiel)"
+
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+
+# menu:
+#   main:
+#     - name: Home
+#       url: ""
+#       weight: 1
+#     - name: About
+#       url: "about/"
+#       weight: 2
+#     - name: Categories
+#       url: "categories/"
+#       weight: 3
+#     - name: Tags
+#       url: "tags/"
+#       weight: 4
+#     - name: Subscribe
+#       url: "index.xml"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)

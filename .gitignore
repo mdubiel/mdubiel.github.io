@@ -3,3 +3,10 @@ imports.*
 dist/
 public/
 .DS_Store 
+public/*.html
+public/*.*
+public/404.html
+public/index.html
+public/index.html
+public/index.xml
+public/sitemap.xml
