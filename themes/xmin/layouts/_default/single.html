@@ -1,9 +1,58 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+  <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+
+    {{ with .Param "summary" }}
+    <p class="single-summary">{{ . | markdownify }}</p>
+    {{ end }}
+
+    <p class="single-readtime">
+    {{ with .Date }}
+      {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    {{end}}
+
+    {{ if .Param "readTime" }}
+      &nbsp; · &nbsp;
+      {{ .ReadingTime }} min read
+      {{end }}
+    </p>
+
+    <p class="single-readtime">
+      {{ with .Params.author }}<div class="author">{{ . }}</div>{{ end }}
+      {{ if (gt .Params.date 0) }}<div class="date">{{ .Date.Format "2006/01/02" }}</div>{{ end }}
+    </p>
+
+    {{ if .Param "showTags" }}
+    {{ $taxonomy := "tags" }}
+    {{ with .Param $taxonomy }}
+  
+    <div class="single-tags">
+      {{ range $index, $tag := . }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+      <span>
+        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+      </span>
+      {{ end }}
+      {{ end }}
+    </div>
+  
+    {{ end }}
+  
+  {{ end }}
+
 </div>
+
+<nav>
+  <ul class="menu">
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+  </nav>
+
+<hr />
 
 <main>
 {{ .Content }}

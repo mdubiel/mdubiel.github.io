@@ -1,128 +1,76 @@
 ---
-title: "Skills and Technologies"
-date: "2024-03-28"
-summary: "Artifact 1"
-description: "Artifact 1"
-toc: false
+title: "Artifact 1: Skills and Technologies"
+date: "2025-04-02"
+author: "Mateusz Dubiel"
+summary: "A breakdown of my technical and soft skills, covering system engineering, software development, and related areas."
+description: "Detailed list of technical skills, coding languages, tools, and soft skills relevant to my experience as a System Development Engineer."
 readTime: true
-autonumber: false
-math: true
-tags: ["database", "java"]
-showTags: false
-hideBackToTop: true
-draft: true
+autonumber: true
+showTags: true
+hideBackToTop: false
+draft: false
+tags: ['skills', 'technologies', 'system engineering', 'software development', 'coding']
 ---
 
-# Skills and Technologies
+## Technical Skills
 
-## Summary
-Accomplished Linux Systems Engineer with extensive experience in managing both physical infrastructure and cloud environments. Proven track record of delivering high-impact Data Center solutions and developing robust Infrastructure as Code (IaC) management platforms, including air-gapped environments. Passionate about automation and process optimization, with strong leadership skills and expertise in Python programming. A results-driven professional dedicated to creating efficient, scalable, and secure systems.
+### Infrastructure & Operations
 
-## Highlights
-- Extensive experience in Linux systems engineering and cloud environments.
-- Proven track record in delivering high-impact Data Center solutions.
-- Expertise in Infrastructure as Code (IaC) and automation.
-- Strong leadership and mentoring skills.
-- Proficient in Python programming and various other coding languages.
+* [Data centers](https://en.wikipedia.org/wiki/Data_center): Hardware, capacity planning, power management, cabling and networking, system maintenance, cooling, repairs, spare parts management
+* Operating Systems: [Linux](https://en.wikipedia.org/wiki/Linux) (Red Hat family, Debian/Ubuntu, Slackware, Gentoo), [Solaris](https://www.oracle.com/solaris/)
 
-## Operating Systems
-<table style="border: none;">
-  <tr>
-    <td><img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux"></td>
-    <td><strong>Linux (Red Hat family, Debian/Ubuntu, Slackware, Gentoo)</strong></td>
-    <td><em>Proficiency:</em> [Your Proficiency]</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td colspan="2" style="font-size: smaller; color: gray;"><em>Description:</em> <em>Linux is a family of open-source Unix-like operating systems based on the Linux kernel.</em></td>
-  </tr>
-  <tr>
-    <td><img src="https://img.icons8.com/color/48/000000/solaris.png" alt="Solaris"></td>
-    <td><strong>Solaris</strong></td>
-    <td><em>Proficiency:</em> [Your Proficiency]</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td colspan="2" style="font-size: smaller; color: gray;"><em>Description:</em> <em>Solaris is a Unix operating system originally developed by Sun Microsystems.</em></td>
-  </tr>
-</table>
+### DevOps & Automation
 
-## DevOps
-- **Centralized Systems Management**
-  - *Description:* Centralized systems management involves managing IT infrastructure from a single point of control.
-  - *Level:* [Your Level]
+* [DevOps](https://en.wikipedia.org/wiki/DevOps): Centralized systems management, configuration management
+* [Kubernetes](https://kubernetes.io/), [Docker](https://www.docker.com/), [IaC (Infrastructure as Code)](https://en.wikipedia.org/wiki/Infrastructure_as_code), [Git](https://git-scm.com/), packages building, OS life-cycle, continuous Integration, virtualization
+* Systems management: [Ansible](https://www.ansible.com/), [Puppet](https://www.puppet.com/), [Terraform](https://www.terraform.io/)
 
-- **Configuration Management (Ansible, Puppet, Terraform)**
-  - *Description:* Configuration management tools help automate the deployment and management of infrastructure.
-  - *Level:* [Your Level]
+### Data Management
 
-- **Kubernetes**
-  - *Description:* Kubernetes is an open-source container orchestration platform for automating deployment, scaling, and management of containerized applications.
-  - *Level:* [Your Level]
+* Databases: [PostgreSQL](https://www.postgresql.org/), [MySQL](https://www.mysql.com/)/[MariaDB](https://mariadb.org/), [Redis](https://redis.io/), [InfluxDB](https://www.influxdata.com/)
 
-- **Docker**
-  - *Description:* Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software in packages called containers.
-  - *Level:* [Your Level]
+### Coding & Development
 
-- **Infrastructure as Code (IaC)**
-  - *Description:* IaC is the process of managing and provisioning computing infrastructure through machine-readable definition files.
-  - *Level:* [Your Level]
+* [Bash scripting](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
+* [Python](https://www.python.org/)
+* [Ansible](https://www.ansible.com/) (for automation)
+* [C](https://en.wikipedia.org/wiki/C_(programming_language))/[C++](https://en.wikipedia.org/wiki/C%2B%2B)
+* [Java](https://www.java.com/)
+* [Perl](https://www.perl.org/)
 
-## Databases
-- **MySQL**
-  - *Description:* MySQL is an open-source relational database management system.
-  - *Level:* [Your Level]
+### Other Technologies
 
-- **PostgreSQL**
-  - *Description:* PostgreSQL is a powerful, open-source object-relational database system.
-  - *Level:* [Your Level]
-
-- **Redis**
-  - *Description:* Redis is an open-source, in-memory data structure store used as a database, cache, and message broker.
-  - *Level:* [Your Level]
-
-## Coding
-- **Bash Scripting**
-  - *Description:* Bash scripting is writing scripts for the Bash shell to automate tasks on Unix-like operating systems.
-  - *Level:* [Your Level]
-
-- **Python**
-  - *Description:* Python is a high-level, interpreted programming language known for its readability and versatility.
-  - *Level:* [Your Level]
-
-- **Ansible**
-  - *Description:* Ansible is an open-source automation tool for configuration management, application deployment, and task automation.
-  - *Level:* [Your Level]
-
-- **C/C++**
-  - *Description:* C is a general-purpose programming language, and C++ is its extension with object-oriented features.
-  - *Level:* [Your Level]
-
-- **Java**
-  - *Description:* Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible.
-  - *Level:* [Your Level]
-
-- **Perl**
-  - *Description:* Perl is a high-level, general-purpose, interpreted, dynamic programming language.
-  - *Level:* [Your Level]
+* [Home Assistant](https://www.home-assistant.io/) and event-driven automation
+* Monitoring ([Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/), [Nagios](https://www.nagios.org/) etc.)
+* WiFi, ethernet, fiber networking
 
 ## Other Skills
-- **Program Management**
-  - *Description:* Program management involves coordinating and managing multiple related projects to achieve strategic objectives.
-  - *Level:* [Your Level]
 
-- **ITIL**
-  - *Description:* ITIL is a set of detailed practices for IT service management that focuses on aligning IT services with the needs of the business.
-  - *Level:* [Your Level]
+* [Program Management](https://en.wikipedia.org/wiki/Project_management): Program coordination, resources management, communication, stakeholders management, program definition and governance cross-functional coordination
+* [ITIL](https://en.wikipedia.org/wiki/ITIL)
+* Technical documentation
+* Soft skills: Problem solving, collaboration & teamwork, adaptability, time management, leadership & mentoring, critical thinking, attention to detail
 
-- **Technical Documentation**
-  - *Description:* Technical documentation involves creating manuals, guides, and other documents to explain complex technical information.
-  - *Level:* [Your Level]
+## Certifications
 
-- **Soft Skills**
-  - *Description:* Soft skills include problem-solving, collaboration, teamwork, adaptability, time management, leadership, mentoring, critical thinking, and attention to detail.
-  - *Level:* [Your Level]
+* Red Hat Certified Specialist in Linux Diagnostics and Troubleshooting, EX342
+* Red Hat Certified Specialist in Ansible Automation, EX407
+* Red Hat Certified Specialist in Virtualization, EX318
+* Red Hat Enterprise Deployment and Systems Management, EX401
+* Red Hat Certified Engineer, RHEL7, EX300
+* Red Hat Certified System Administrator, RHEL7, EX200
+* ITIL Foundation Certificate in IT Service Management
+* Oracle Certified Associate, Oracle WebLogic Server 11g System Administrator
+* Oracle Exalogic X2-2 Certified Specialist
+* Red Hat Certified Engineer, RHEL5, RH302L
+* Sun Certified System Administrator for Solaris 10 OS
 
----
+*Note: Some of these certifications may have expired or may no longer be directly relevant to my current role. Exam codes and certification programs can change, so always verify the latest details on the vendor's official website (e.g., Red Hat, Oracle).*
 
-Feel free to replace the placeholders with your actual information. This template provides a structured way to present your skills and technologies on your Hugo site.
+## Languages
+
+I am proficient in the following languages:
+
+* Polish (native)
+* English (professional)
+* German (conversational)

@@ -11,7 +11,7 @@ footnoteReturnLinkContents: "^"
 googleAnalytics: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 footnotereturnlinkcontents:  "↩"
-
+enableGitInfo: true
 params:
   description: "A website built through Hugo and blogdown."
   footer: "&copy; [Mateusz Dubiel](https://mdubiel.github.io/) 2024 -- {Year} | [Github](https://github.com/mdubiel)"
@@ -20,14 +20,14 @@ permalinks:
   note: "/note/:year/:month/:day/:slug/"
   post: "/post/:year/:month/:day/:slug/"
 
-# menu:
-#   main:
-#     - name: Home
-#       url: ""
-#       weight: 1
-#     - name: About
-#       url: "about/"
-#       weight: 2
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: About
+      url: "about/"
+      weight: 2
 #     - name: Categories
 #       url: "categories/"
 #       weight: 3

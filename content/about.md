@@ -1,51 +1,48 @@
 ---
 title: "About Me"
-date: "2025-03-20"
-summary: "A brief introduction to Python programming."
-description: "A brief introduction to Python programming."
-toc: false
+date: "2025-04-02"
+author: "Mateusz Dubiel"
+summary: "System Development Engineer with a passion for automation, cloud technologies, and full-stack development."
+description: "Learn about Mateusz Dubiel's journey in IT, from his early days in system administration and software development to his current role at Google, with a focus on Linux, Kubernetes, and Django."
 readTime: true
-autonumber: false
-math: false
-showTags: false
+autonumber: true
+showTags: true
 hideBackToTop: false
-draft: true
+draft: false
+tags: ['system engineering', 'software development', 'linux', 'kubernetes', 'django', 'automation', 'cloud']
 ---
 
-I am **Mateusz** *(pron. /maˈtɛ.uʂ/)*, an accomplished [System Development Engineer](https://en.wikipedia.org/wiki/Systems_engineering) with extensive experience in managing both physical infrastructure and cloud environments. I have a proven track record of delivering high-impact [Data Center](https://en.wikipedia.org/wiki/Data_center) solutions and developing robust [Infrastructure as Code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_code) management platforms, including air-gapped environments. I am passionate about [automation](https://en.wikipedia.org/wiki/Automation) and process optimization, with strong leadership skills and expertise in [Python programming](https://www.python.org/). As a results-driven professional, I am dedicated to creating efficient, scalable, and secure systems.
+## Who?
 
-Currently, I work as a System Development Engineer in [GDC Air-Gapped solutions](https://cloud.google.com/distributed-cloud/), where my daily responsibilities involve managing [Linux](https://en.wikipedia.org/wiki/Linux) and [Kubernetes](https://kubernetes.io/) systems. I also have extensive experience with data center operations and hardware, complemented by some exposure to [Technical Program Management](https://en.wikipedia.org/wiki/Technical_program_manager). My role involves building complete Linux Management platforms, handling on-call duties.
+I am **Mateusz** *(pron. /maˈtɛ.uʂ/)*, born in 1982 and currently working as a [System Development Engineer](https://en.wikipedia.org/wiki/Systems_engineering) at Google.
 
-Beyond infrastructure and automation, I have a strong interest in full-stack development, particularly using [Django](https://www.djangoproject.com/) and [Python](https://www.python.org/). Django’s structured, "batteries-included" approach allows me to build scalable and maintainable applications efficiently, leveraging Python’s simplicity and power. On the frontend, I prefer using [HTMX](https://htmx.org/) for dynamic interactions without complex JavaScript frameworks and [Tailwind CSS](https://tailwindcss.com/) for a streamlined, utility-first approach to styling. I enjoy designing end-to-end solutions, from database models to user interfaces, ensuring clean architecture and smooth functionality. Whether for professional projects or personal initiatives, I apply the same principles of efficiency, security, and reliability to my software development work.
+## Introduction
 
-I hold a degree in [Computer Science](https://en.wikipedia.org/wiki/Computer_science) and have a strong background in Linux, having worked with [Gentoo](https://www.gentoo.org/) and [Slackware](http://www.slackware.com/) in the past. Additionally, I am passionate about [smart home technologies](https://en.wikipedia.org/wiki/Home_automation) and work with [Home Assistant](https://www.home-assistant.io/). 
+Born in 1982, I completed my studies at the Technical University in 2007 and have since built a career as a System Engineer with a broad understanding of various technologies.
 
----
+Outside of work, I'm a fan of heavy metal music and fantasy novels.
 
-# About Me
+For a comprehensive overview of my professional history, please visit my [LinkedIn profile](https://www.linkedin.com/in/mdubiel/).
 
-## Basic Information
-- **Name:** [Your Name]
-- **Location:** [Your Location]
-- **Email:** [Your Email]
-- **LinkedIn:** [Your LinkedIn Profile URL]
+Below, you'll find more detailed information about my experience, which I've prepared in the following sections:
 
-## Summary
-Born in 1982, completed Technical University in 2007
-System Engineer with a wide knowledge of technologies.
-
-Fan of heavy metal music and fantasy novels.
-
-For my full history check my LinkedIn profile.
-
-Have a look below for artifacts I prepared about my experience.
-
-- Artifact 1: [Skills and Technologies](../artifacts/skills.md)
-- Artifact 2: [Software Development](../artifacts/software-development.md)
-- Artifact 3: [System Engineering](../artifacts/system-engineering.md)
-- Artifact 4: [Django Developer Journal (Velowerk story)](../artifacts/django-developer-journal.md)
-
+- Artifact 1: [Skills and Technologies](../artifacts/skills)
+- Artifact 2: [Software Development](../artifacts/software-development)
+- Artifact 3: [System Engineering](../artifacts/system-engineering)
+- in preparation - *Artifact 4: Developer Journal (Velowerk story)* 
 
 ---
 
-Feel free to replace the placeholders with your actual information. This template provides a structured way to present your basic information, skills, summary, and a timeline of important events in your life.
+## What I Bring to the Table
+
+Now, while my [CV](https://www.linkedin.com/in/mdubiel/) might not immediately reveal this, if you need task A done on system B to achieve result C, you can likely expect a relatively quick and high-quality outcome. This holds true even if I'm not initially familiar with the specific [technology](https://en.wikipedia.org/wiki/Technology) or environment. I pride myself on being a fast learner with a drive to deeply understand how things work and how to improve them, always aiming to deliver the best scalable results.
+
+I pay close attention to detail and the potential for a solution to [scale](https://en.wikipedia.org/wiki/Scalability).
+
+I have a particular fondness for [Linux](https://en.wikipedia.org/wiki/Linux) based systems and any [management system](https://en.wikipedia.org/wiki/Management_system) that allows for centralised control over multiple systems or even entire environments. Naturally, this goes hand-in-hand with [automation](https://en.wikipedia.org/wiki/Automation) using modern tools like [Ansible](https://www.ansible.com/), [Puppet](https://www.puppet.com/), and [Terraform](https://www.terraform.io/).
+
+Integrating [Python](https://www.python.org/) coding and [Bash scripting](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) into this [SysEng](https://en.wikipedia.org/wiki/Systems_engineering) mix makes everything run more smoothly and efficiently. My philosophy is that 'if it can be scripted, it should be scripted,' and I prefer to invest time in automating solutions rather than repeatedly resorting to the tedium of copy-pasting.
+
+My preferred shells and tools are: [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) / [Zsh](https://www.zsh.org/), [fzf](https://github.com/junegunn/fzf), and [tmux](https://github.com/tmux/tmux).
+
+*I'll be sharing my [dotfiles](https://en.wikipedia.org/wiki/Dot_file) repository once I've had a chance to tidy them up.*
