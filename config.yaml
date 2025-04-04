@@ -2,6 +2,7 @@ baseURL: 'https://mdubiel.github.io/'
 theme: "xmin"
 copyright: "Copyright © 2025, Mateusz Dubiel."
 defaultContentLanguage: "en"
+title: "mdubiel Engineer Portfolio & Developer Journal"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT: true
@@ -13,7 +14,7 @@ ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 footnotereturnlinkcontents:  "↩"
 enableGitInfo: true
 params:
-  description: "A website built through Hugo and blogdown."
+  description: "A website built through Hugo."
   footer: "&copy; [Mateusz Dubiel](https://mdubiel.github.io/) 2024 -- {Year} | [Github](https://github.com/mdubiel)"
 
 permalinks:
@@ -22,10 +23,10 @@ permalinks:
 
 menu:
   main:
-    - name: Home
+    - name: home
       url: ""
       weight: 1
-    - name: About
+    - name: about
       url: "about/"
       weight: 2
 #     - name: Categories

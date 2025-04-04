@@ -1,5 +1,16 @@
 {{ partial "header.html" . }}
 
-{{ .Content }}
+<header class="page-header">
+  <div class="article-meta">
+    <h1 class="title">Hi there!</h1>
+    I am <b>Mateusz</b> <i>(pron. /maˈtɛ.uʂ/)</i> and this is my portfolio and developer journal.
+  </div>
+  <hr />
+</header>
+
+
+<main class="page-content">
+  {{ .Content }}
+</main>
 
 {{ partial "footer.html" . }}

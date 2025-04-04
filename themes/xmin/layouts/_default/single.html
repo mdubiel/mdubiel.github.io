@@ -1,61 +1,33 @@
 {{ partial "header.html" . }}
-<div class="article-meta">
-  <h1><span class="title">{{ .Title | markdownify }}</span></h1>
 
-    {{ with .Param "summary" }}
-    <p class="single-summary">{{ . | markdownify }}</p>
+<header class="page-header">
+  <div class="article-meta">
+    <h1 class="title">{{ .Title }}</h1>
+    {{ with .Params.summary }}
+    <p class="single-summary">{{ . }}</p>
     {{ end }}
-
     <p class="single-readtime">
-    {{ with .Date }}
-      {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
-      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-    {{end}}
-
-    {{ if .Param "readTime" }}
-      &nbsp; · &nbsp;
-      {{ .ReadingTime }} min read
-      {{end }}
-    </p>
-
-    <p class="single-readtime">
-      {{ with .Params.author }}<div class="author">{{ . }}</div>{{ end }}
-      {{ if (gt .Params.date 0) }}<div class="date">{{ .Date.Format "2006/01/02" }}</div>{{ end }}
-    </p>
-
-    {{ if .Param "showTags" }}
-    {{ $taxonomy := "tags" }}
-    {{ with .Param $taxonomy }}
-  
-    <div class="single-tags">
-      {{ range $index, $tag := . }}
-      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-      <span>
-        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
-      </span>
+      {{ with .Params.author }}
+      <span class="author">{{ . }}</span>
       {{ end }}
+      <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="readtime">{{ .ReadingTime }} min read</span>
+    </p>
+    {{ if .Params.tags }}
+    <div class="single-tags">
+      {{ range .Params.tags }}
+      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
       {{ end }}
     </div>
-  
     {{ end }}
-  
-  {{ end }}
+    <hr />
+  </div>
 
-</div>
+</header>
 
-<nav>
-  <ul class="menu">
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-    {{ end }}
-  </ul>
-  </nav>
 
-<hr />
-
-<main>
-{{ .Content }}
+<main class="page-content">
+  {{ .Content }}
 </main>
 
 {{ partial "footer.html" . }}

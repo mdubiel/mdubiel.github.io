@@ -1,20 +1,28 @@
 {{ partial "header.html" . }}
 
-{{if not .IsHome }}
-<h1>{{ .Title | markdownify }}</h1>
-{{ end }}
+<header class="page-header">
+  <div class="article-meta">
+    <h1 class="title">Tag: {{ .Title | markdownify }}</h1>
+  </div>
+  <hr />
+</header>
 
-{{ .Content }}
 
-<ul>
-  {{ $pages := .Pages }}
-  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{ range (where $pages "Section" "!=" "") }}
-  <li>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-  </li>
-  {{ end }}
-</ul>
+<main class="page-content">
+  {{ .Content }}
+  <ul>
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+    {{ range (where $pages "Section" "!=" "") }}
+    <li>
+      <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  
+</main>
+
+
 
 {{ partial "footer.html" . }}
