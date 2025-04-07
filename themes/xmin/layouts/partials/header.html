@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" data-theme="nord">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "css/nord.css" | relURL }}" />
+    <!-- <link rel="stylesheet" href="{{ "css/nord.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" /> -->
+    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
 
-  <body>
-    <div class="site-wrapper">
-      <nav class="main-menu">
-        <ul>
+  <body class="bg-base-100">
+    <div class="bg-base-200 w-1/2 mx-auto flex flex-col border-1 border-primary p-2">
+
+      <nav class="flex flex-row lg:menu-horizontal bg-base-200 rounded-box w-full">
+        <ul class="flex flex-row justify-start gap-x-2 items-center p-4 font-bold ">
           {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL | relURL }}">/{{ .Name }}</a></li>
+          <li><a href="{{ .URL | relURL }}" class="hover:text-primary">/{{ .Name }}</a></li>
           {{ end }}
         </ul>
       </nav>

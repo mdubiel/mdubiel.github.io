@@ -1,30 +1,28 @@
 {{ partial "header.html" . }}
 
-<header class="page-header">
+<header class="mx-2 mt-4 mb-0  gap-y-2">
   <div class="article-meta">
-    <h1 class="title">{{ .Title }}</h1>
+    <h1 class="text-4xl font-bold text-primary dark:text-accent pb-4">{{ .Title }}</h1>
     {{ with .Params.summary }}
-    <p class="single-summary">{{ . }}</p>
+    <p class="italic">{{ . }}</p>
     {{ end }}
     <p class="single-readtime">
       {{ with .Params.author }}
-      <span class="author">{{ . }}</span>
+      <span class="font-semibold text-secondary">{{ . }}</span>, 
       {{ end }}
-      <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-      <span class="readtime">{{ .ReadingTime }} min read</span>
+      <span class="italic text-secondary">{{ .Date.Format "Jan 2, 2006" }}</span>, 
+      <span class="italic text-secondary">{{ .ReadingTime }} min read</span>
     </p>
     {{ if .Params.tags }}
-    <div class="single-tags">
+    <div class="mt-4 pb-2 pt-2">
       {{ range .Params.tags }}
-      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+      <a href="/tags/{{ . | urlize }}" class="bg-base-300 text-primary text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm border border-primary ">{{ . }}</a>
       {{ end }}
     </div>
     {{ end }}
-    <hr />
+    <div class="divider"></div>
   </div>
-
 </header>
-
 
 <main class="page-content">
   {{ .Content }}

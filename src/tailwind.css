@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: nord --default;
+}
+@import "./nord.css";
+@import "./fonts.css";
+
+@theme {
+    --font-sans: Optima, Candara, Calibri, Arial, sans-serif;
+    --font-mono: "Lucida Console", Monaco, monospace;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+}
+
+@layer base {
+  .page-content blockquote {
+    @apply text-neutral border border-l-8 border-neutral p-4 bg-neutral/10 mx-4;
+  }
+  .page-content h2 {
+    @apply text-3xl font-semibold text-primary mt-2 py-2 ml-4;
+  }
+  .page-content h3 {
+    @apply text-2xl font-semibold text-primary mt-2 py-4 ml-4;
+  }
+  .page-content ul {
+    @apply list-disc pl-10;
+  }
+  .page-content li {
+    @apply py-1;
+  }
+
+  .page-content p {
+    @apply mx-4 py-1 text-justify;
+  }
+  .page-content a {
+    @apply underline text-primary hover:text-secondary;
+  }
+  
+  .page-content hr {
+    @apply border-neutral/50 my-4;
+  }
+}
