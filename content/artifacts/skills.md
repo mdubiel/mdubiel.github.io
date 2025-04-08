@@ -51,7 +51,9 @@ tags: ['skills', 'technologies', 'system engineering', 'software development', '
 * Technical documentation
 * Soft skills: Problem solving, collaboration & teamwork, adaptability, time management, leadership & mentoring, critical thinking, attention to detail
 
-## Certifications
+## Certifications / courses / trainings
+
+* DeepLearning.AI - [AI For Everyone](https://coursera.org/share/9264a34aebbe529a75c9f7915e49da5a)
 
 * Red Hat Certified Specialist in Linux Diagnostics and Troubleshooting, EX342
 * Red Hat Certified Specialist in Ansible Automation, EX407
