@@ -1,5 +1,5 @@
 ---
-title: "welcome!"
+title: "Home"
 date: "2025-04-02"
 author: "Mateusz Dubiel"
 summary: "My portfolio and developer journal, showcasing my journey as a System Development Engineer and my insights into software development."

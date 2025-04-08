@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: nord --default;
+  themes: nord --default, sunset --prefersdark;
 }
 @import "./nord.css";
 @import "./fonts.css";
@@ -15,14 +15,17 @@
 }
 
 @layer base {
+  h1 {
+    @apply text-neutral text-4xl font-bold;
+  }
   .page-content blockquote {
     @apply text-neutral border border-l-8 border-neutral p-4 bg-neutral/10 mx-4;
   }
   .page-content h2 {
-    @apply text-3xl font-semibold text-primary mt-2 py-2 ml-4;
+    @apply text-3xl font-semibold text-neutral mt-2 py-2 ml-4;
   }
   .page-content h3 {
-    @apply text-2xl font-semibold text-primary mt-2 py-4 ml-4;
+    @apply text-2xl font-semibold text-neutral mt-2 py-4 ml-4;
   }
   .page-content ul {
     @apply list-disc pl-10;
@@ -35,10 +38,18 @@
     @apply mx-4 py-1 text-justify;
   }
   .page-content a {
-    @apply underline text-primary hover:text-secondary;
+    @apply underline text-neutral hover:text-primary;
   }
   
   .page-content hr {
     @apply border-neutral/50 my-4;
+  }
+
+  .tags {
+    @apply mt-2 pb-0 pt-0 flex flex-row flex-wrap;
+  }
+
+  .tags a {
+    @apply bg-neutral text-neutral-content text-xs font-medium me-2 px-3 py-1 rounded-full;
   }
 }

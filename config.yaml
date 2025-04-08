@@ -2,7 +2,7 @@ baseURL: 'https://mdubiel.github.io/'
 theme: "xmin"
 copyright: "Copyright © 2025, Mateusz Dubiel."
 defaultContentLanguage: "en"
-title: "mdubiel Engineer Portfolio & Developer Journal"
+title: "mdubiel, it engineer portfolio & developer journal"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT: true

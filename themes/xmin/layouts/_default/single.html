@@ -2,21 +2,26 @@
 
 <header class="mx-2 mt-4 mb-0  gap-y-2">
   <div class="article-meta">
-    <h1 class="text-4xl font-bold text-primary dark:text-accent pb-4">{{ .Title }}</h1>
+    <h1 class="pb-4">{{ .Title }}</h1>
     {{ with .Params.summary }}
     <p class="italic">{{ . }}</p>
     {{ end }}
-    <p class="single-readtime">
+    <p class="pt-2">
       {{ with .Params.author }}
-      <span class="font-semibold text-secondary">{{ . }}</span>, 
+      <span class="font-semibold text-neutral">{{ . }}</span>
+
+      <span class="font-semibold text-primary mx-2">&middot;</span>
       {{ end }}
-      <span class="italic text-secondary">{{ .Date.Format "Jan 2, 2006" }}</span>, 
-      <span class="italic text-secondary">{{ .ReadingTime }} min read</span>
+      <span class="italic text-neutral">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="font-semibold text-primary mx-2">&middot;</span>
+      <span class="italic text-neutral">{{ .ReadingTime }} min read</span>
     </p>
     {{ if .Params.tags }}
-    <div class="mt-4 pb-2 pt-2">
+    <div class="tags">
       {{ range .Params.tags }}
-      <a href="/tags/{{ . | urlize }}" class="bg-base-300 text-primary text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm border border-primary ">{{ . }}</a>
+      <div>
+      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+      </div>
       {{ end }}
     </div>
     {{ end }}
