@@ -15,10 +15,16 @@
     <div class="bg-base-100 w-full md:w-2/3 lg:w-1/2 w-1/2 mx-auto flex flex-col border-primary p-2 sm:p-4">
 
       <nav class="flex flex-row lg:menu-horizontal bg-base-100 w-full">
-        <ul class="flex flex-row justify-start gap-x-2 items-center p-2 font-bold ">
+        <ul class="flex flex-row justify-start gap-x-2 items-center p-2 font-bold flex-grow">
           <li>Navigate to: </li>
           {{ range .Site.Menus.main }}
           <li><a href="{{ .URL | relURL }}" class="hover:text-primary underline text-neutral">/{{ .Name }}</a></li>
           {{ end }}
+          <li class="flex-grow"></li>
+          <li class="flex">
+     
+
+            
+          </li>
         </ul>
       </nav>
