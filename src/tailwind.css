@@ -21,11 +21,14 @@
   .page-content blockquote {
     @apply text-neutral border border-l-8 border-neutral p-4 bg-neutral/10 mx-4;
   }
+  .page-content h1 {
+    @apply text-4xl font-semibold text-neutral mt-2 py-2 ml-2;
+  }
   .page-content h2 {
-    @apply text-3xl font-semibold text-neutral mt-2 py-2 ml-4;
+    @apply text-3xl font-semibold text-neutral mt-2 py-2 ml-2;
   }
   .page-content h3 {
-    @apply text-2xl font-semibold text-neutral mt-2 py-4 ml-4;
+    @apply text-2xl font-semibold text-neutral mt-2 py-2 ml-2;
   }
   .page-content ul {
     @apply list-disc pl-10;
@@ -35,7 +38,7 @@
   }
 
   .page-content p {
-    @apply mx-4 py-1 text-justify;
+    @apply mx-2 py-1 text-justify;
   }
   .page-content a {
     @apply underline text-neutral hover:text-primary;

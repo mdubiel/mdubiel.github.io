@@ -29,6 +29,9 @@ menu:
     - name: about
       url: "about/"
       weight: 2
+    - name: journal
+      url: "journal/introduction/"
+      weight: 2
 #     - name: Categories
 #       url: "categories/"
 #       weight: 3

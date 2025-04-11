@@ -16,7 +16,7 @@ tags: ['portfolio', 'developer journal', 'system engineering', 'software develop
 
 ### Explore My Work
 
-* **Developer Journal:** My thoughts, insights, and projects related to modern web application development. (Coming Soon!)
+* **[Developer Journal](journal/introduction/):** My thoughts, insights, and projects related to modern web application development. (Coming Soon!)
 * **Portfolio Artifacts:**
     * [Skills and Technologies](../artifacts/skills/)
     * [Software Development](../artifacts/software-development/)

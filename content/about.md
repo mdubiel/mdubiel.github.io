@@ -29,7 +29,7 @@ Below, you'll find more detailed information about my experience, which I've pre
 - Artifact 1: [Skills and Technologies](../artifacts/skills)
 - Artifact 2: [Software Development](../artifacts/software-development)
 - Artifact 3: [System Engineering](../artifacts/system-engineering)
-- in preparation - *Artifact 4: Developer Journal (Velowerk story)* 
+- Artifact 4: [Developer Journal](../journal/introduction) 
 
 ---
 
