@@ -1,0 +1,22 @@
+{{- $lang := .Get "lang" | default "Code" -}}
+{{- $filename := .Get "filename" | default "" -}}
+
+<div class="codeblock">
+  <div>
+    <div class="filename">
+      
+      {{ if $filename }}
+      file: {{ $filename }}
+      {{ end }}
+    </div>
+  
+    <div class="flex-grow"></div>
+    <!-- Language Tag -->
+    <div class="codelang">
+      {{- $lang -}}
+    </div>
+    
+  </div>
+
+  <pre><code>{{ .Inner | replaceRE `^\s+|\s+$` "" | safeHTML }}</code></pre>
+</div>

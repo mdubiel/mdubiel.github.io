@@ -19,7 +19,7 @@
     @apply text-neutral text-4xl font-bold;
   }
   .page-content blockquote {
-    @apply text-neutral border border-l-8 border-neutral p-4 bg-neutral/10 mx-4;
+    @apply text-neutral border border-l-8 border-neutral p-4 bg-neutral/10 mx-4 my-4;
   }
   .page-content h1 {
     @apply text-4xl font-semibold text-neutral mt-2 py-2 ml-2;
@@ -55,4 +55,43 @@
   .tags a {
     @apply bg-neutral text-neutral-content text-xs font-medium me-2 px-3 py-1 rounded-full;
   }
+
+  .page-content>pre {
+    @apply bg-base-200 text-base-content p-4 rounded-lg overflow-x-auto;
+  }
+  .page-content>pre>code {
+    @apply text-sm font-mono;
+  }
+
+
+  .page-content>p>code {
+    @apply text-sm font-mono;
+  }
+
+  .codeblock {
+    @apply flex flex-col bg-base-300 rounded-lg shadow-md my-2;
+  }
+  .codeblock>div{
+    @apply flex flex-row;
+  }
+  .codeblock>div>div.filename {
+    @apply  text-neutral text-sm px-4 pt-4 rounded-br-lg rounded-tl-lg;
+  }
+  .codeblock>div>div.codelang {
+    @apply text-neutral text-sm px-4 pt-4 rounded-br-lg rounded-tl-lg;
+  }
+  .codeblock>pre {
+    @apply text-base-content whitespace-pre px-4 pt-3 pb-3 m-0;
+  }
+  div.lang {
+    @apply absolute top-0 right-0 bg-primary text-primary-content text-[10px] px-1.5 py-0.5 rounded-bl-md z-10;
+  }
+  pre.code {
+    @apply border-pink-400 border-2 bg-base-200 text-base-content text-sm font-mono rounded-md overflow-x-auto pt-0 pb-3 px-3;
+  }
+  pre.code code {
+    @apply text-sm font-mono;
+  }
+
+
 }
