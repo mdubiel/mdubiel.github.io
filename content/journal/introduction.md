@@ -1,9 +1,9 @@
 ---
-title: "Embarking on the Development Journey: A Full-Stack Chronicle"
+title: "Embarking on the Dev Journey: A Full-Stack Chronicle"
 date: "2025-04-11"
 author: "Mateusz Dubiel"
 summary: "An introduction to this journal, charting the course to build a robust, open-source full-stack application, Beryl, powered by Django and modern technologies."
-description: "Join me on this development journey as we build Beryl, a full-stack application for managing collectibles, from the ground up using the Django framework and a suite of cutting-edge technologies. This journal will document every step of the open-source process."
+description: "Join me on this dev journey as we build Beryl, a full-stack applications, from the ground up using the Django framework and a suite of cutting-edge technologies. This journal will document every step of the open-source process."
 readTime: true
 autonumber: true
 showTags: true
@@ -13,7 +13,7 @@ tags: ["Django", "Full-Stack", "Open-Source", "Beryl", "Development", "Project C
 commits: []
 next: "/journal/the-repository"
 ---
-## Welcome to the Development Journal
+## Welcome to the Dev Journal
 
 I'm not a big fan of the word "blog"; it often evokes the idea of personal thoughts shared publicly, and this endeavour is something quite different. I find that "*Journal*" is a rather comprehensive term for the story I'd like to tell, and prefixing it with "*Developer*" or "*Dev*" makes it complete.
 
@@ -47,4 +47,4 @@ Here's a glimpse into the journey ahead and the key milestones we'll be tackling
 
 With the roadmap laid out, it's time to take the first step on this exciting development adventure.
 
-Read next: [The Repository]({{< relref "journal/the_repository.md" >}})
+Read next: [The Repository]({{< relref "/journal/the_repository.md" >}})

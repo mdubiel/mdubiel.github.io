@@ -25,9 +25,6 @@ Make sure to bookmark this URL: [https://github.com/mdubiel/beryl3](https://gith
 
 > _Note:_ This repository is currently empty, indicating that I still have some initial work to complete this journal.
 
-In the later stages of development, I'll invite you to participate in discussions and raise [**Pull Requests**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) where applicable.
-
-
 ### Getting the Code: Your Local Beryl Repository
 
 To get a local copy of the Beryl project's code and start exploring, you can easily clone the repository to your own machine using the standard Git command. This will download the entire project history, allowing you to browse the files, track changes, and eventually contribute your own improvements. Open your terminal or command prompt and navigate to the directory where you'd like to store the project, then execute the following code block:
@@ -47,6 +44,6 @@ cd beryl3
 
 Now you have a local working copy of the Beryl repository, ready for you to explore as the project evolves. As new code and features are added, you can keep your local copy up-to-date by using the `git pull` command within the `beryl3` directory. 
 
-You can find comprehensive information about fetching and merging changes from a remote repository in the [GitHub documentation on `git pull`](https://www.google.com/search?q=https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-upstream/merging-an-upstream-repository-into-your-local-repository). 
+You can find comprehensive information about fetching and merging changes from a remote repository in the [GitHub documentation on `git pull`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-upstream/merging-an-upstream-repository-into-your-local-repository). 
 
 For a broader understanding of Git and its commands, the [official Git documentation](https://git-scm.com/doc) is an excellent resource.

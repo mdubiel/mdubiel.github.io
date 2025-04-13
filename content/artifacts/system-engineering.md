@@ -16,7 +16,7 @@ tags: ['system engineering', 'career history', 'linux', 'automation', 'devops']
 
 ### Early Career: Politechnika Opolska
 
-My journey into the world of systems began during my time as an IT Technician at [Politechnika Opolska](https://www.google.com/search?q=https://www.po.edu.pl/en/), where I also studied [Computer Science](https://en.wikipedia.org/wiki/Computer_science). It was a valuable opportunity to gain hands-on experience alongside a small team of fellow students, and it's where I started building my first proper professional networks.
+My journey into the world of systems began during my time as an IT Technician at [Politechnika Opolska](https://www.po.edu.pl/en/), where I also studied [Computer Science](https://en.wikipedia.org/wiki/Computer_science). It was a valuable opportunity to gain hands-on experience alongside a small team of fellow students, and it's where I started building my first proper professional networks.
 
 I developed a keen interest in [automation](https://en.wikipedia.org/wiki/Automation) early on. I remember setting up [PXE](https://en.wikipedia.org/wiki/Preboot_Execution_Environment) booting to automate [Linux](https://en.wikipedia.org/wiki/Linux) installations across the university's computer labs, which significantly reduced the time required for OS deployments. We initially implemented centralised system management using custom-written scripts, which, while effective, became difficult to maintain as the environment grew. This led us to adopt [Puppet](https://www.puppet.com/) for more robust configuration management, allowing us to enforce consistency and streamline updates across a large number of servers.
 
@@ -50,15 +50,15 @@ My main responsibilities included:
     * [LDAP](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) for user authentication and authorisation.
 * Managing Data Center operations and being responsible for hardware assets, from procurement and installation to decommissioning.
 
-It was also during this time that I had the \*unique\* experience of maintaining legacy [Solaris](https://www.oracle.com/solaris/) installations on [SPARC](https://en.wikipedia.org/wiki/SPARC) architecture, which presented its own set of challenges and required a deep understanding of older systems. I also had the opportunity to work with other obscure and niche technologies, which broadened my skill set and problem-solving abilities.
+It was also during this time that I had the *unique* experience of maintaining legacy [Solaris](https://www.oracle.com/solaris/) installations on [SPARC](https://en.wikipedia.org/wiki/SPARC) architecture, which presented its own set of challenges and required a deep understanding of older systems. I also had the opportunity to work with other obscure and niche technologies, which broadened my skill set and problem-solving abilities.
 
 ### ESA/ESOC
 
-Then there was that \*utterly unforgettable\* chapter working for [ESA/ESOC](https://www.esa.int/Science_Exploration/Space_Science/ESOC). It was an experience I must mention as being truly… \*unique\*. However, the full details of that particular adventure are a tale I shall reserve for a more personal setting.
+Then there was that *utterly unforgettable* chapter working for [ESA/ESOC](https://www.esa.int/Science_Exploration/Space_Science/ESOC). It was an experience I must mention as being truly… *unique*. However, the full details of that particular adventure are a tale I shall reserve for a more personal setting.
 
 ### Google
 
-My most recent career chapter, spanning over seven years and counting, began with my acquisition by Google. I joined their *"running with screwdriver"* team (as they affectionately call it), and I absolutely loved my time as a [Data Center Engineer](https://en.wikipedia.org/wiki/Data_center), finding it both enjoyable and a fantastic learning experience. This role involved hands-on work with data center infrastructure, including hardware installation, maintenance, and troubleshooting.
+My most recent career chapter, spanning over seven years and counting, began with my acquisition by Google. I joined their *"running with screwdriver"* team, and I absolutely loved my time as a [Data Center Engineer](https://en.wikipedia.org/wiki/Data_center), finding it both enjoyable and a fantastic learning experience. This role involved hands-on work with data center infrastructure, including hardware installation, maintenance, and troubleshooting.
 
 My eagerness to expand my horizons led me to the Data Center Design and Capacity Planning team, where I took on a role as a [Technical Program Manager](https://en.wikipedia.org/wiki/Technical_program_manager). This shift allowed me to develop my program management skills, focusing on planning, coordination, and execution of large-scale infrastructure projects.
 

@@ -29,13 +29,13 @@ Below, you'll find more detailed information about my experience, which I've pre
 - Artifact 1: [Skills and Technologies](../artifacts/skills)
 - Artifact 2: [Software Development](../artifacts/software-development)
 - Artifact 3: [System Engineering](../artifacts/system-engineering)
-- Artifact 4: [Developer Journal](../journal/introduction) 
+- Artifact 4: [Dev Journal](../journal/introduction) 
 
 ---
 
 ## What I Bring to the Table
 
-Now, while my [CV](https://www.linkedin.com/in/mdubiel/) might not immediately reveal this, if you need task A done on system B to achieve result C, you can likely expect a relatively quick and high-quality outcome. This holds true even if I'm not initially familiar with the specific [technology](https://en.wikipedia.org/wiki/Technology) or environment. I pride myself on being a fast learner with a drive to deeply understand how things work and how to improve them, always aiming to deliver the best scalable results.
+Now, while my [CV](https://www.linkedin.com/in/mdubiel/) might not immediately reveal this, if you need *task A* done on *system B* to achieve *result C*, you can likely expect a relatively quick and high-quality outcome. This holds true even if I'm not initially familiar with the specific [technology](https://en.wikipedia.org/wiki/Technology) or environment. I pride myself on being a fast learner with a drive to deeply understand how things work and how to improve them, always aiming to deliver the best scalable results.
 
 I pay close attention to detail and the potential for a solution to [scale](https://en.wikipedia.org/wiki/Scalability).
 
@@ -45,4 +45,3 @@ Integrating [Python](https://www.python.org/) coding and [Bash scripting](https:
 
 My preferred shells and tools are: [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) / [Zsh](https://www.zsh.org/), [fzf](https://github.com/junegunn/fzf), and [tmux](https://github.com/tmux/tmux).
 
-*I'll be sharing my [dotfiles](https://en.wikipedia.org/wiki/Dot_file) repository once I've had a chance to tidy them up.*

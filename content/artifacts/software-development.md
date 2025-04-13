@@ -16,16 +16,16 @@ tags: ['software development', 'programming', 'django', 'python', 'web developme
 
 ### Early Programming at University
 
-Even back in my university days studying [Computer Science](https://en.wikipedia.org/wiki/Computer_science) at [Politechnika Opolska](https://www.google.com/search?q=https://www.po.edu.pl/en/), I always had a knack for the nitty-gritty.
+Even back in my university days studying [Computer Science](https://en.wikipedia.org/wiki/Computer_science) at [Politechnika Opolska](https://www.po.edu.pl/en/), I always had a knack for the nitty-gritty.
 I found myself drawn to the intricacies of programming, whether it was:
 
 * Wrestling with the low-level intricacies of [Assembler](https://en.wikipedia.org/wiki/Assembly_language) (especially that old [8080](https://en.wikipedia.org/wiki/Intel_8080)!)
-* Getting to grips with the object-oriented world of [Java](https://www.google.com/search?q=https://en.wikipedia.org/wiki/Java_(programming_language)) and [C++](https://en.wikipedia.org/wiki/C%2B%2B)
+* Getting to grips with the object-oriented world of [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) and [C++](https://en.wikipedia.org/wiki/C%2B%2B)
 * Crafting solid bits of code in [ANSI C](https://en.wikipedia.org/wiki/ANSI_C)
 
 I found it all rather engaging.
 That was also when I started taking my first steps into the world of [Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence), even building my own [neural networks](https://en.wikipedia.org/wiki/Neural_network) using good old [Matlab](https://www.mathworks.com/products/matlab.html).
-I even dipped my toes into the world of industrial automation with languages like [SAIA](https://www.google.com/search?q=https://www.saia-pcd.com/) and similar technologies.
+I even dipped my toes into the world of industrial automation with languages like [SAIA](https://www.saia-pcd.com/) and similar technologies.
 I always enjoyed tackling the algorithmic challenges, wrapping my head around things like [O() notation](https://en.wikipedia.org/wiki/Big_O_notation) and generally trying to write efficient and well-structured code.
 
 ### piweczko.org Project
@@ -53,7 +53,7 @@ I continued to enjoy tackling smaller coding tasks for professional purposes, fi
 
 My scripting focus shifted towards:
 
-* [Bash](https://www.google.com/search?q=https://en.wikipedia.org/wiki/Bash_(Unix_shell)%23Scripting) and [Perl](https://www.perl.org/), which were particularly handy in the [Linux](https://en.wikipedia.org/wiki/Linux) environments I was working in.
+* [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)%23Scripting) and [Perl](https://www.perl.org/), which were particularly handy in the [Linux](https://en.wikipedia.org/wiki/Linux) environments I was working in.
 * Later on, I embraced [Python](https://www.python.org/) for its versatility and power, using it to build scripts that streamlined daily tasks and, crucially, to construct complete [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) (Continuous Integration/Continuous Delivery) pipelines.
 
 It was during this period that I first encountered [Jenkins](https://www.jenkins.io/) and its ecosystem of tools, which became instrumental in automating software delivery.
@@ -78,4 +78,4 @@ While NDAs prevent me from going into too much detail about the professional one
 * **Velowerk:** A customer portal in development for bike shops, aiming to connect bike owners with local workshops.
 
 Looking ahead, I'm committed to continuous growth, always eager to learn new technologies, and to further advance my skills in the ones I already know and love.
-The ongoing story of my development journey, including more details on projects like Velowerk, will continue in my Developer Journal.
+The ongoing story of my development journey, including more details on projects like Velowerk, will continue in my [Dev Journal]({{< relref "/journal/introduction.md" >}}).

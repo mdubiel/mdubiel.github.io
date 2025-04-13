@@ -75,4 +75,4 @@ I am proficient in the following languages:
 
 * Polish (native)
 * English (professional)
-* German (conversational)
+* German (intermediate)
