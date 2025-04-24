@@ -1,0 +1,70 @@
+{{/* layouts/shortcodes/prev_next.html */}}
+{{ $prev := .Page.Params.prev_page }}
+{{ $next := .Page.Params.next_page }}
+
+
+<div class="flex flex-row justify-between items-start my-8 mx-0">
+  {{ if $prev }}
+    {{ with $prev }}
+    <div class="p-0 flex flex-row flex-nowrap items-start w-1/2">
+      <div class="p-2">
+        <a href="{{ . }}" class="btn btn-soft btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </a>
+      </div>
+      <div class="flex flex-col py-2">
+        <div class="text-sm font-bold flex">
+        Previous:
+        </div>
+        <div class="text-sm flex flex-wrap">
+
+        <a href="{{ . }}" class="hover:underline text-neutral">
+          {{ $prevPage := $.Site.GetPage $prev }}
+          {{ with $prevPage }}
+          {{ .Params.title }}
+          {{ end }}
+        </a>
+        
+        </div>
+      </div>
+      
+    </div>
+    {{ end }}
+    {{ end }}
+
+    {{ if and $prev $next }}
+    <div class="divider divider-horizontal"></div>
+    {{ end }}
+
+    {{ if $next }}
+    {{ with $next }}
+    <div class="p-0 flex flex-row flex-nowrapitems-start w-1/2 flex-grow justify-end justify-items-end">
+
+      <div class="flex flex-col p-2 justify-items-end justify-end">
+        <div class="text-sm font-bold flex justify-end">
+        Next:
+        </div>
+        <div class="text-sm flex flex-wrap justify-end">
+        <a href="{{ . }}" class="hover:underline text-neutral">
+          {{ $nextPage := $.Site.GetPage $next }}
+          {{ with $nextPage }}
+          {{ .Params.title }}
+          {{ end }}
+        </a>
+        
+        </div>
+      </div>
+      <div class="p-2">
+        <a href="{{ . }}" class="btn btn-soft btn-secondary ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+

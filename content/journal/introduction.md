@@ -11,7 +11,7 @@ hideBackToTop: false
 draft: false
 tags: ["Django", "Full-Stack", "Open-Source", "Beryl", "Development", "Project Chronicle"]
 commits: []
-next: "/journal/the-repository"
+next_page: "/journal/the-repository"
 ---
 ## Welcome to the Dev Journal
 
@@ -47,4 +47,4 @@ Here's a glimpse into the journey ahead and the key milestones we'll be tackling
 
 With the roadmap laid out, it's time to take the first step on this exciting development adventure.
 
-Read next: [The Repository]({{< relref "/journal/the_repository.md" >}})
+Read next: [The Repository]({{< relref "/journal/the-repository.md" >}})

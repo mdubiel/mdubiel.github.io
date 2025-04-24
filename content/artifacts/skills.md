@@ -54,6 +54,7 @@ tags: ['skills', 'technologies', 'system engineering', 'software development', '
 ## Certifications / courses / trainings
 
 * DeepLearning.AI - [AI For Everyone](https://coursera.org/share/9264a34aebbe529a75c9f7915e49da5a)
+* DeepLearning.AI - [AI Python for Beginners](https://coursera.org/share/2fcf8f1785bba9a49f3920539b0508ce)
 
 * Red Hat Certified Specialist in Linux Diagnostics and Troubleshooting, EX342
 * Red Hat Certified Specialist in Ansible Automation, EX407

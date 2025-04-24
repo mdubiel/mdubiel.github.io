@@ -96,5 +96,7 @@
     @apply text-sm font-mono;
   }
 
-
+  ol {
+    @apply list-decimal pl-10;
+  }
 }
