@@ -12,9 +12,8 @@ draft: false
 tags: ["Beryl", "Repository", "GitHub", "Open-Source", "Version Control"]
 repo: "https://github.com/mdubiel/beryl3"
 commits: []
-slug: "the-repository"
-prev: "/journal/introduction"
-next: "/journal/user_stories"
+prev_page: "/journal/introduction"
+next_page: "/journal/user-stories"
 ---
 
 ## The Repository: Beryl's Open-Source Home
@@ -47,3 +46,6 @@ Now you have a local working copy of the Beryl repository, ready for you to expl
 You can find comprehensive information about fetching and merging changes from a remote repository in the [GitHub documentation on `git pull`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-upstream/merging-an-upstream-repository-into-your-local-repository). 
 
 For a broader understanding of Git and its commands, the [official Git documentation](https://git-scm.com/doc) is an excellent resource.
+
+
+
