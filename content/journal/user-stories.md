@@ -11,6 +11,7 @@ showTags: true
 hideBackToTop: false
 tags: ['user stories', 'agile', 'software development', 'project management', 'requirements engineering', 'beryl project', 'feature definition', 'collection management', 'administration', 'marketing'] 
 prev_page: "/journal/the-repository"
+next_page: "/journal/tech-stack"
 ---
 
 ## What is a User Story?
