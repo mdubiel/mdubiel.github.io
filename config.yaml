@@ -4,6 +4,10 @@ copyright: "Copyright © 2025, Mateusz Dubiel."
 defaultContentLanguage: "en"
 title: "mdubiel, it engineer portfolio & developer journal"
 
+services:
+  googleAnalytics:
+    ID: "G-7D5429KW7V"
+
 # Generate a nice robots.txt for SEO
 enableRobotsTXT: true
 enableInlineShortcodes: true

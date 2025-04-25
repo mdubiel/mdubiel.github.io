@@ -1,0 +1,57 @@
+{{/* layouts/partials/cookie_consent.html */}}
+
+{{/* Only render this banner if Google Analytics ID is set in config */}}
+{{ if .Site.Config.Services.GoogleAnalytics.ID }}
+<div id="cookieConsentBanner"
+     class="fixed bottom-0 left-0 right-0 bg-neutral text-neutral-content p-4 text-sm z-50 hidden shadow-lg"
+     role="alert"
+     aria-live="polite">
+  <div class="container mx-auto flex flex-wrap items-center justify-center gap-4">
+    <p class="flex-grow text-center md:text-left">
+      This website uses cookies, including Google Analytics, to enhance user experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies.
+      {{ with .Site.GetPage "/privacy-policy" }}
+        <a href="{{ .RelPermalink }}" class="underline hover:text-primary ml-2">Learn More</a>
+      {{ end }}
+    </p>
+    <button id="acceptCookieConsent" class="btn btn-sm btn-primary">
+      Accept
+    </button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    if (typeof window === 'undefined' || typeof document === 'undefined' || typeof localStorage === 'undefined') {
+      return;
+    }
+
+    const banner = document.getElementById('cookieConsentBanner');
+    const acceptButton = document.getElementById('acceptCookieConsent');
+    const consentKey = 'cookieConsentAccepted_v1';
+
+    if (!banner || !acceptButton) {
+      console.warn('Cookie consent banner elements not found.');
+      return;
+    }
+
+    const consentGiven = localStorage.getItem(consentKey);
+
+    if (!consentGiven) {
+      banner.classList.remove('hidden');
+    }
+
+    acceptButton.addEventListener('click', function() {
+      localStorage.setItem(consentKey, 'true');
+      banner.classList.add('hidden');
+
+      // --- ADD THIS LINE ---
+      // Call the GA initialization function defined in header.html
+      if (typeof initializeAnalytics === 'function') {
+        initializeAnalytics();
+      }
+      // --- END ADDITION ---
+
+    });
+  })();
+</script>
+{{ end }} {{/* End check for Google Analytics ID */}}
