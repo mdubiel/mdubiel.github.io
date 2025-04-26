@@ -99,4 +99,9 @@
   ol {
     @apply list-decimal pl-10;
   }
+
+  .journal-sidebar {
+    @apply bg-base-200 text-base-content p-4 rounded-lg shadow-md;
+  }
+
 }

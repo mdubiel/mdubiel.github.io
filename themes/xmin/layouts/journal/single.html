@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+<header class="mx-2 mt-4 mb-0  gap-y-2">
+  <div class="article-meta">
+    <h1 class="pb-4">{{ .Title }}</h1>
+    {{ with .Params.summary }}
+    <p class="italic">{{ . }}</p>
+    {{ end }}
+    <p class="pt-2">
+      {{ with .Params.author }}
+      <span class="font-semibold text-neutral">{{ . }}</span>
+
+      <span class="font-semibold text-primary mx-2">&middot;</span>
+      {{ end }}
+      <span class="italic text-neutral">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="font-semibold text-primary mx-2">&middot;</span>
+      <span class="italic text-neutral">{{ .ReadingTime }} min read</span>
+    </p>
+    {{ if .Params.tags }}
+    <div class="tags">
+      {{ range .Params.tags }}
+      <div>
+      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    <div class="divider"></div>
+  </div>
+</header>
+
+<main class="page-content z-index-10">
+
+  {{ .Content }}
+
+  
+</main>
+
+{{ partial "prev_next.html" . }}
+{{ partial "journal_sidebar.html" . }}
+{{ partial "footer.html" . }}

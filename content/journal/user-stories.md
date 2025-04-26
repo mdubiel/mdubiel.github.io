@@ -1,8 +1,7 @@
 ---
-title: "Beryl Project: User Stories"
+title: "Beryl's user stories"
 date: 2024-05-16T10:00:00+02:00 
 draft: false
-type: "single"
 summary: "A comprehensive collection of user stories defining the features and interactions for the Beryl collection management application."
 description: "Detailed user stories outlining desired functionality for the Beryl application, covering user accounts, list/item management, administration, marketing, and more. Serves as a foundation for development."
 readTime: true

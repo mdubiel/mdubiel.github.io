@@ -1,5 +1,5 @@
 ---
-title: "Beryl Project: Technology Stack Choices"
+title: "Technology stack selection for Beryl"
 date: "2024-04-11"
 author: "Mateusz Dubiel"
 summary: "Exploring the core technologies selected for the Beryl project, including Django, HTMX, TailwindCSS, PostgreSQL, Docker, and more, with rationale for each choice."

@@ -1,5 +1,5 @@
 ---
-title: "Embarking on the Dev Journey: A Full-Stack Chronicle"
+title: "Introduction: a full-stack chronicle"
 date: "2025-04-11"
 author: "Mateusz Dubiel"
 summary: "An introduction to this journal, charting the course to build a robust, open-source full-stack application, Beryl, powered by Django and modern technologies."

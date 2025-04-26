@@ -1,0 +1,45 @@
+{{/* layouts/partials/journal_sidebar.html */}}
+<aside class="
+journal-sidebar-content
+w-full lg:w-[350px]
+h-auto lg:h-[calc(100vh-120px)] {{/* Keep height constraint */}}
+mt-8 mb-8 lg:my-0
+static lg:fixed
+lg:top-1/2                 {{/* Changed: Position top edge at 50% */}}
+lg:-translate-y-1/2        {{/* Added: Shift up by half its height */}}
+overflow-y-visible lg:overflow-y-auto
+    p-4
+    bg-base-200
+    text-base-content
+    rounded-box
+    shadow-lg z-10
+    border border-base-300
+
+lg:right-[20px]
+journal-sidebar">
+
+
+  <h3 class="text-lg font-semibold mb-3 border-b border-base-300 pb-2">Journal Entries</h3>
+  <ul class="space-y-2 text-sm pl-0">
+    {{ $journalPages := where .Site.RegularPages "Section" "journal" }}
+    {{ $sortedPages := $journalPages.ByDate.Reverse }}
+    {{ $currentPage := . }} {{/* Store current page context */}}
+
+    {{ range $index, $page := $sortedPages }}
+      <li class="relative flex items-baseline">
+        <span class="inline-block w-5 mr-1 text-right flex-shrink-0">{{ add $index 1 }}.</span>
+        {{ $tooltipText := printf "%s" ($page.Date.Format "Jan 2, 2006")}}
+
+        {{/* Check if the page in the loop is the current page */}}
+        {{ $isCurrent := eq $page.RelPermalink $currentPage.RelPermalink }}
+
+        <a href="{{ $page.RelPermalink }}"
+           class="relative z-40 hover:underline hover:text-primary tooltip tooltip-bottom tooltip-journal-custom
+                  {{ if $isCurrent }} font-semibold text-primary {{ end }}" {{/* Add classes if current */}}
+           data-tip="{{ $tooltipText | safeHTMLAttr }}">
+          {{ $page.Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</aside>

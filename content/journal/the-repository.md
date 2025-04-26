@@ -1,5 +1,5 @@
 ---
-title: "The Repository: Beryl's Open-Source Home"
+title: "Beryl's open-source home - GitHub repo"
 date: "2025-04-11"
 author: "Mateusz Dubiel"
 summary: "Introducing the public GitHub repository for the Beryl project, the central location for all code, discussions, and contributions."
