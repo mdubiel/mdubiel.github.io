@@ -1,6 +1,6 @@
 ---
 title: "Beryl's open-source home - GitHub repo"
-date: "2025-04-11"
+date: "2025-04-12"
 author: "Mateusz Dubiel"
 summary: "Introducing the public GitHub repository for the Beryl project, the central location for all code, discussions, and contributions."
 description: "This page provides access to the GitHub repository where the source code for the Beryl project is hosted. Bookmark this link to follow development, participate in discussions, and contribute to the open-source application."

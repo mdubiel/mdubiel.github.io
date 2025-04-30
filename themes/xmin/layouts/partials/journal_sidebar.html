@@ -22,7 +22,7 @@ journal-sidebar">
   <h3 class="text-lg font-semibold mb-3 border-b border-base-300 pb-2">Journal Entries</h3>
   <ul class="space-y-2 text-sm pl-0">
     {{ $journalPages := where .Site.RegularPages "Section" "journal" }}
-    {{ $sortedPages := $journalPages.ByDate.Reverse }}
+    {{ $sortedPages := $journalPages.ByDate }}
     {{ $currentPage := . }} {{/* Store current page context */}}
 
     {{ range $index, $page := $sortedPages }}

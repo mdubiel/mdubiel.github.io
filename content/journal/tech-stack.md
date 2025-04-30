@@ -1,6 +1,6 @@
 ---
 title: "Technology stack selection for Beryl"
-date: "2024-04-11"
+date: "2025-04-18"
 author: "Mateusz Dubiel"
 summary: "Exploring the core technologies selected for the Beryl project, including Django, HTMX, TailwindCSS, PostgreSQL, Docker, and more, with rationale for each choice."
 description: "A detailed look at the technology stack chosen for the Beryl full-stack application. Covers frontend (HTMX, TailwindCSS), backend (Django, Python, PostgreSQL, Celery), development tools, and infrastructure plans (Docker, Redis)."
@@ -12,6 +12,7 @@ draft: false
 tags: ["Django", "Full-Stack", "Open-Source", "Beryl", "Development", "Project Chronicle", "Tech Stack", "Python", "HTMX", "TailwindCSS", "PostgreSQL", "Docker", "Redis", "Celery", "django-ninja"]
 commits: []
 prev_page: "/journal/user-stories"
+next_page: "/journal/project-structure"
 ---
 
 ## Technology stack for the app
