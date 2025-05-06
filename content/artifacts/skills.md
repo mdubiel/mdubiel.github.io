@@ -29,6 +29,25 @@ tags: ['skills', 'technologies', 'system engineering', 'software development', '
 
 * Databases: [PostgreSQL](https://www.postgresql.org/), [MySQL](https://www.mysql.com/)/[MariaDB](https://mariadb.org/), [Redis](https://redis.io/), [InfluxDB](https://www.influxdata.com/)
 
+
+### Security
+
+* Secure infrastructure design: Experience hardening systems for regulated and air-gapped environments (e.g., Google Distributed Cloud Air-Gapped)
+
+* Identity and access management: Implementation of LDAP, OIDC, SAML, and federated authentication in enterprise and research environments
+
+* Vulnerability management: Hands-on experience patching, automating updates, and managing security baselines across Linux systems
+
+* Compliance-aware infrastructure: Delivering solutions aligned with ISO 27001, GDPR, and sector-specific data protection requirements
+
+* Trusted computing foundations: Familiarity with TPM, secure boot concepts, firmware-level control, and hardware/software trust boundaries
+
+* Audit and traceability: Implementing centralized logging, system auditing, and configuration tracking for compliance and incident response
+
+* Threat modeling & risk assessment (basic): Participated in cross-team design reviews with a focus on potential system-level risks
+
+* Security automation: Using Ansible and Terraform to enforce secure configurations and reduce manual error surfaces
+
 ### Coding & Development
 
 * [Bash scripting](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
