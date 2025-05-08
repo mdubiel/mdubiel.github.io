@@ -1,66 +1,67 @@
 ---
-title: "Project Structure"
-date: "2025-04-30" 
+title: "Structuring Beryl's Django Project: A Multi-App Approach"
+date: "2025-05-08" 
 author: "Mateusz Dubiel"
-summary: ""
-description: ""
+summary: "Outlines the Django project structure for Beryl, detailing a multi-app architecture with 'core', 'web', and 'api' applications to promote separation of concerns and scalability."
+description: "Explains the rationale and implementation of a multi-app Django project structure for Beryl. Covers the roles of 'core', 'web', and 'api' apps, static file management with TailwindCSS, and initial setup steps for a maintainable and scalable codebase."
 readTime: true
 autonumber: true
 showTags: true
 hideBackToTop: false
-draft: true
-tags: []
+draft: false
+tags: ["Django", "Project Structure", "Architecture", "Beryl", "Development", "Django Apps", "Core App", "API Design", "Static Files", "TailwindCSS", "Scalability", "Maintainability"]
 commits: []
-prev_page: "/journal/project-structure" 
+prev_page: "/journal/project-structure"
 ---
 
 ## Django project folder for multiple apps
 
-Django offers a very flexible ways to create a project structure, when browsing the web for any directions (or just simply follow the official documentation), you can easy find number of solutions.
+**Django** offers very flexible ways to create a project structure. When browsing the web for guidance (or simply following the [official Django documentation](https://docs.djangoproject.com/en/stable/)), you can easily find numerous solutions.
 
-The first thought might be to use a recommendation from Django, what is perfect start and would work for many projects very well, however in this one I'd like to "complicate" things a bit, as I want to have one project but many apps, serving for different purposes (I name it "Domains"). Here is the idea.
+The first thought might be to use the recommendation from Django, which is a perfect start and would work very well for many projects. However, in this project, I'd like to "complicate" things a bit. My goal is to have one project with multiple **Django apps**, each serving a distinct purpose (which I'll refer to as "**domains**"). The key is to separate these functional domains into different Django applications while keeping shared logic (like **models**) in a dedicated place.
 
-The key is to separate functional domains into different Django applications while keeping shared logic (like models) in a dedicated place.
+This is the idea.
 
 ### The Core
 
-One of the "apps" in Django terminology will be the core, the place where I'd like to define all models, all managers, and put all utilities and any other means of common code base. Reasoning for this is, to have a common structure for all domains I'll create later - this let me simply use  `core.*` reference to access this code.
-This is enormous simplification, and I write code once!
+One of the "apps" in Django terminology will be the **`core` app**. This is where I plan to define all **models**, **managers**, and place all **utilities** and any other common codebase components. The reasoning for this is to establish a common structure for all domains I'll create later. This allows me to simply use a `core.*` reference to access this shared code.
+
+This offers an enormous simplification, as I write the code once!
 
 ### Webapp
 
-The most important part of this project now is this monolithic webapplication, saying monolithic I mean frontend and backend are build in one app (and then later deployed in one container) rather to be separated, what could be done later if needed. This application will use models definied in `core` and all utilities definied there as well. The code here is pure application related. This is my first domain:The Application
+The most important part of this project, for now, is the **monolithic web application**. By monolithic, I mean the frontend and backend are built within a single app (and later deployed in one container), rather than being separated—which could be an option for a future revision. This application will use models defined in `core` and all utilities defined there as well. The code here is purely application-related. This constitutes my first domain: **The Application**.
 
 ### API
 
-Later, I'd like to introduce API, that user can use to access data. This will be also used by mobile application, and from other web frontends. This of course would utilize same models from `core`, and would keep the same structure as other components in this project. The major thing here would be applicaiton api views. This is second domain of this application: "API domain"
+Later, I plan to introduce an **API** that users can use to access data. This API will also be used by a potential mobile application and other web frontends. Naturally, it will utilize the same models from `core` and maintain the same structure as other components in this project. The major component here will be the application's API views. This forms the second domain of this application: the **API Domain**.
 
-### Analitics
+### Analytics
 
-For marketing purposes (this is not a scope of my application now) is that I pin marketing tools to this app thru separate domain, but it would use exactly same data. Only frontend will change and will have dedicated views. Let's call it third domain: "Analytics domain".
+For marketing purposes (though not within the current scope of my application), I envision pinning marketing tools to this app through a separate domain. This domain would use the exact same data. Only the frontend will differ, featuring dedicated views. Let's call this the third domain: the **Analytics Domain**.
 
-With this approach, I can add as many functional domains as I like, still keeping the core structure intacted and aligned across entire project.
+With this approach, I can add as many functional domains as needed, while keeping the core structure intact and aligned across the entire project.
 
 ### TailwindCSS source
 
-As I'm going to use TailwindCSS for the frontend, I need to have a source directory where I would place all inputs for Tailwind and its utilities (like npm packages).
+Since I'm going to use **TailwindCSS** for the frontend, I need a source directory (e.g., `src/`) to place all inputs for Tailwind and its utilities (like **npm** packages).
 
 ### Statics source and local CDN
 
-One of other considerations is how to serve static files. As on production they would be delegated to file bucket, in local development it is need to simulate this behaviour.
+Another important consideration is how to serve **static files**. While in production they would be delegated to a file bucket (like Google Cloud Storage (GCS) or Amazon S3), local development requires simulating this behavior.
 
-The first directory is the source, where I put all required CSS, JS, and image files. Second directory is `local_cdn` from where files would be served, and for synchronization fo that folder `collectstatics` tools is used.
+The first directory is the **source** (e.g., `static/` for compiled assets, `src/` for source assets), where I'll place all required CSS, JS, and image files. The second directory, `local_cdn/`, is where files will be served from after being collected by Django's `collectstatic` command, simulating a CDN locally.
 
-In the devlopment static files will be server thru the Django (read more about this in django documentation) but in production all statics (whatever match `/static/`) will be server by separate HTTPD server to avoid performance issues.
+In development, static files will be served through Django (refer to the Django documentation on static files for more details). However, in production, all static files (matching `/static/`) will be served by a separate HTTPD server (e.g., Nginx, Apache) to avoid performance issues.
 
-How to work with statics (and media files) would be described in separate entry.
+How to work with static and media files will be described in a separate entry.
 
 ## Benefits of this approach
 
-- **Separation** of functional domains: The data layer (`core`), web application (`webapp`), and API  (`api`) are distinct, making the codebase organized and easy to understand.
-- **Reusability**: Models defined in core are easily imported and used by all views.
-- **Maintainability**: Data model is centralized in the `core`. I can modify an application view without affecting the API views.
-- **Scalability**: It's clear where to add new features should go. It would be beneficial later to create separate containers for each domain and deploy them on Production separatelly (though they'd still share the database).
+- **Separation**: Functional **domains** such as the data layer (`core`), web application (`web`), and API (`api`) are distinct. This makes the codebase more organized and easier to understand.
+- **Reusability**: **Models** defined in `core` are easily imported and utilized by all views across different applications.
+- **Maintainability**: The data model is centralized in the **`core` app**. I can modify an application view without inadvertently affecting API views (as long as the underlying model contracts are respected).
+- **Scalability**: It's clear where new features should be added. This structure also paves the way for future scalability, such as creating separate containers for each domain and deploying them independently in production (though they would still share the same database).
 
 ## The structure
 
@@ -80,29 +81,28 @@ webapp/                 # Project root directory
 │   ├── apps.py
 │   ├── migrations/     # Database migrations for core models
 │   │   └── __init__.py
-│   ├── models.py       # ALL  database models go here
+│   ├── models.py       # ALL database models go here
 │   ├── tests.py        # Tests for core logic
 │   └── utils.py        # Optional: Shared utility functions
 ├── web/                #  main web application
 │   ├── __init__.py
-│   ├── admin.py        # Admin configurations specific to webapp (if any)
+│   ├── admin.py        # Admin configurations specific to web
 │   ├── apps.py
 │   ├── migrations/     # Migrations specific to webapp
 │   │   └── __init__.py
-│   ├── models.py       # empty or minimal - models are in core
-│   ├── tests.py        # Tests for webapp views/forms etc.
+│   ├── models.py       # empty or minimal
+│   ├── tests.py        # Tests for web views/forms etc.
 │   ├── views.py        # Views that render templates, handle form submissions, etc.
 │   ├── urls.py         # URL patterns specific to the webapp
 │   └── templates/      # HTML templates for the webapp
 │       └── webapp/
-│           └── ...     # Your template files
-├── api/                # Your future API application
+├── api/                # API application
 │   ├── __init__.py
 │   ├── admin.py        # Admin configurations specific to API
 │   ├── apps.py
 │   ├── migrations/     # Migrations specific to API
 │   │   └── __init__.py
-│   ├── models.py       # empty or minimal - models are in core
+│   ├── models.py       # empty or minimal
 │   ├── tests.py        # Tests for API endpoints
 │   ├── views.py        # Views that handle API requests (return JSON/data)
 │   └── urls.py         # URL patterns specific to the API (often prefixed, e.g., /api/)
@@ -121,23 +121,34 @@ webapp/                 # Project root directory
 
 ## Execution
 
-For this basic folder structure, let's use django management tools to do that, it will generate all necessary files accordingly depending of ised django version. You can create app folders manually but is is not recommended way to do that.
+To create this basic folder structure, let's use Django's management tools. These tools will generate all necessary files according to the Django version being used. While you can create app folders manually, it is not the recommended approach.
 
-ensure venv is loaded
-which django-admin
+Ensure the correct Python virtual environment is activated and verify the installed Django version:
 
+```bash
+$ source .venv/bin/activate
+$ which django-admin
+/home/mdubiel/github/beryl3/.venv/bin/django-admin
+$ django-admin --version
+5.2
+```
+
+### Create Django project and applications:
+
+```bash
+cd webapp/
 django-admin startproject webapp .
 python manage.py startapp core
-python manage.py startapp webapp
-# When ready for API:
-# python manage.py startapp api
+python manage.py startapp web
+python manage.py startapp api
+```
 
-Configure settings.py:
-Add your new apps to INSTALLED_APPS:
+### Configure settings.py
 
+Add your new apps to `INSTALLED_APPS`:
 
-Python
-# myproject/myproject/settings.py
+```python
+# webapp/webapp/settings.py
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -146,61 +157,55 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',      # Add your core app
-    'webapp',    # Add your webapp
-    # 'api',     # Add when you create it
-]
+    'core.apps.CoreConfig',      # Add Core app
+    'web.apps.WebConfig',        # Add Web Application
+    'api.apps.ApiConfig',        # Add API Application
 
-# myproject/myproject/urls.py
+]
+```
+
+A word on URL structure: All default requests to the application domain (e.g., `https://beryl.app/`) will be served by the **Web Application** module (web app). All other modules, like the API, must have a defined prefix. For instance, to call the API, one would use `https://beryl.app/api/`.
+
+The only potential pitfall is to avoid using the same top-level prefix (e.g., `/api/`) anywhere else in other applications, particularly in the web application. This means I must avoid defining paths like `/api/...` within the web application's `urls.py`.
+
+```python
+# webapp/webapp/urls.py
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('webapp.urls')), # Include webapp urls at the root
-    # When ready for API:
-    # path('api/', include('api.urls')), # Include api urls, typically with a prefix
+    path('', include('web.urls')), # Include web urls at the root
+    path('api/', include('api.urls')), # Include api urls, typically with a prefix
 ]
+```
 
-Setup Node.js Dependencies (Tailwind & DaisyUI)
-npm init -y
-npm install -D tailwindcss@latest daisyui
-npx tailwindcss init
-mkdir src
-mv tailwind.config.js src/
+Create minimal `urls.py` files for the `web` and `api` apps. Remember how Python's import system works here: `web.` refers to the `web/` directory (making it a package), and `urls` refers to the `urls.py` file within it.
 
-Update src/tailwind.config.js: Edit the file to configure Tailwind and add DaisyUI.
-JavaScript
-// src/tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    // Scan all HTML files in any 'templates' directory within any subdirectory
-    "../**/templates/**/*.html",
-    // If you have JS files that dynamically add classes, add them here too:
-    // "../**/static/js/**/*.js",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('daisyui'), // Add DaisyUI plugin
-  ],
+```bash
+$ echo 'urlpatterns = []' > web/urls.py
+$ echo 'urlpatterns = []' > api/urls.py
+```
 
-  // Optional: DaisyUI configuration
-  daisyui: {
-    themes: ["light", "dark", "cupcake"], // Example themes
-    // Other options: styled, base, utils, logs
-  },
+### Setup Node.js Dependencies
+
+**TailwindCSS** and **DaisyUI** require an additional development folder and build tools, which are typically managed using `npm` (Node Package Manager).
+
+Check the official TailwindCSS documentation for various ways to install this component. Here, I'm using my preferred method, the Tailwind CSS CLI.
+
+```bash
+$ npm init -y
+$ npm install -D tailwindcss@latest @tailwindcss/cli daisyui@latest
+$ mkdir src
+```
+
+Next, create your Tailwind input CSS file (e.g., `src/input.css`) with basic utilities. Keep in mind that there are significant differences between Tailwind CSS v3 and v4. Always refer to the official TailwindCSS documentation for version-specific details.
+
+```css
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: nord --default, sunset --prefersdark;
 }
+```
 
-/* src/input.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* You can add your own global custom styles here */
-
-
-
-
+That's all for the structural setup. In the next entry, we'll initialize the project and verify that everything is working as expected.

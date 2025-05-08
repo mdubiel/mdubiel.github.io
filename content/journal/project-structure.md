@@ -11,11 +11,12 @@ hideBackToTop: false
 draft: false
 tags: ["Django", "Full-Stack", "Open-Source", "Beryl", "Development", "Project Chronicle", "Project Structure", "Architecture"]
 commits: []
-prev_page: "/journal/tech-stack" 
+prev_page: "/journal/tech-stack"
+next_page: "/journal/django-app-folder"
 ---
 
 
-## Defining the Project Structure
+## Defining the project structure
 
 Right, let's talk about organization. Before getting carried away with the actual coding – which inevitably brings its own set of challenges – it's a good idea to plan where everything will go. A well-defined project structure acts as a map, helping to keep track of all the different parts and preventing things from getting lost later on.
 
@@ -35,12 +36,14 @@ There is a lot of advantages using `uv`, one is that I can set entire project fr
 
 It also uses `requirements.txt` and `pyproject.toml` files making it compatible with pip and poetry.
 
-The structure of this folder consists of following folders:
+The structure of this project consists of following folders:
  - main directory, with `README.md`, `pyproject.toml` and similar files, creating the solid root for this project.
  - `webapp` - containing django web application
  - `mobile` - for future mobile application development
  - `docker` - componentes related to contenarization, with development environment setup and docker build files
  - `scripts` - supporting executables
+
+### Project bootstrap
 
 `uv` can be installed using snap:
 
