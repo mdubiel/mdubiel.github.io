@@ -13,6 +13,7 @@ tags: ["Django", "Full-Stack", "Open-Source", "Beryl", "Development", "Project C
 commits: []
 next_page: "/journal/the-repository"
 ---
+
 ## Welcome to the Dev Journal
 
 I'm not a big fan of the word "blog"; it often evokes the idea of personal thoughts shared publicly, and this endeavour is something quite different. I find that "*Journal*" is a rather comprehensive term for the story I'd like to tell, and prefixing it with "*Developer*" or "*Dev*" makes it complete.

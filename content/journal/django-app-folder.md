@@ -1,5 +1,5 @@
 ---
-title: "Structuring Beryl's Django Project: A Multi-App Approach"
+title: "Structuring Django Project: A Multi-App Approach"
 date: "2025-05-08" 
 author: "Mateusz Dubiel"
 summary: "Outlines the Django project structure for Beryl, detailing a multi-app architecture with 'core', 'web', and 'api' applications to promote separation of concerns and scalability."
@@ -12,6 +12,7 @@ draft: false
 tags: ["Django", "Project Structure", "Architecture", "Beryl", "Development", "Django Apps", "Core App", "API Design", "Static Files", "TailwindCSS", "Scalability", "Maintainability"]
 commits: []
 prev_page: "/journal/project-structure"
+next_page: "/journal/initial-run"
 ---
 
 ## Django project folder for multiple apps
@@ -67,7 +68,7 @@ How to work with static and media files will be described in a separate entry.
 
 Project structure is the following:
 
-```
+```bash
 webapp/                 # Project root directory
 ├── manage.py           # Django management script
 ├── webapp/             # project configuration directory

@@ -47,26 +47,26 @@ The structure of this project consists of following folders:
 
 `uv` can be installed using snap:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ sudo snap install --classic astral-uv
-{{< /codeblock >}}
+```
 
 From now, I will operate exclusivelly in `beryl3` directory, which in my case is a local github repository.
 
 Prepare environment:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ uv init \
   --name beryl3 \
   --bare \
   --no-package \
   --description "Beryl, collection management system" \
   --author-from git
-{{< /codeblock >}}
+```
 
 Setup first component which is Web Application:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ uv init \
   --name beryl3-webapp \
   --bare \
@@ -77,17 +77,17 @@ $ uv init \
 
 Adding `beryl3-webapp` as member of workspace `/home/mdubiel/github/beryl3`
 Initialized project `beryl3-webapp` at `/home/mdubiel/github/beryl3/webapp/`
-{{< /codeblock >}}
+```
 
 Create addtional folders for docker components and scripts folder:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ mkdir docker scripts
-{{< /codeblock >}}
+```
 
 Now, the folder structure should look like this:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ tree --dirsfirst -F
 ./
 ├── docker/
@@ -100,31 +100,31 @@ $ tree --dirsfirst -F
 └── uv.lock
 
 3 directories, 5 files
-{{< /codeblock >}}
+```
 
 Let's add necessary elements to that, we need python3.12 for entire project, and django for webapp component:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ uv python install 3.12
 Installed Python 3.12.10 in 1.75s
  + cpython-3.12.10-linux-x86_64-gnu
-{{< /codeblock >}}
+```
 
 Set this python as default:
-{{< codeblock lang="bash" >}}
+```bash
 $ uv python pin 3.12
 Pinned `.python-version` to `3.12`
-{{< /codeblock >}}
+```
 
 Install django:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ cd webapp/ && uv add "django>=5.2,<6.0"
-{{< /codeblock >}}
+```
 
 Verify installation:
 
-{{< codeblock lang="bash" >}}
+```bash
 $ uv run django-admin --version
 5.2
 
@@ -140,7 +140,7 @@ beryl3-webapp v0.1.0
 beryl3 v0.1.0
 └── beryl3-webapp v0.1.0 (*)
 (*) Package tree already displayed
-{{< /codeblock >}}
+```
 
 ## Next steps
 

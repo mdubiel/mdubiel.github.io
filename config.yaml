@@ -47,7 +47,11 @@ menu:
 
 markup:
   highlight:
-    codeFences: false
+    codeFences: true
+    style: borland
+    tabWidth: 2
+    lineNos: false
+    lineNumbersInTable: false
   goldmark:
     renderer:
       unsafe: true

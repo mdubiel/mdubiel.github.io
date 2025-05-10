@@ -28,18 +28,17 @@ Make sure to bookmark this URL: [https://github.com/mdubiel/beryl3](https://gith
 
 To get a local copy of the Beryl project's code and start exploring, you can easily clone the repository to your own machine using the standard Git command. This will download the entire project history, allowing you to browse the files, track changes, and eventually contribute your own improvements. Open your terminal or command prompt and navigate to the directory where you'd like to store the project, then execute the following code block:
 
-{{< codeblock lang="bash" >}}
+```bash
 git clone https://github.com/mdubiel/beryl3
-{{< /codeblock >}}
+```
 
 For more detailed information on the `git clone` command refert to the [GitHub documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)).
 
 Once the cloning process is complete, you'll find a new directory named `beryl3` containing all the project files. You can then navigate into this directory using the `cd` command. 
 
-{{< codeblock lang="bash" >}}
+```bash
 cd beryl3
-{{< /codeblock >}}
-
+```
 
 Now you have a local working copy of the Beryl repository, ready for you to explore as the project evolves. As new code and features are added, you can keep your local copy up-to-date by using the `git pull` command within the `beryl3` directory. 
 
