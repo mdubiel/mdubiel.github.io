@@ -9,5 +9,5 @@ npx @tailwindcss/cli -i src/tailwind.css -o themes/xmin/static/css/tailwind.css 
 ### Hugo
 
 ```bash
-/snap/bin/hugo server --cleanDestinationDir --disableFastRender --bind 0.0.0.0
+/snap/bin/hugo server --cleanDestinationDir --disableFastRender hugo server --cleanDestinationDir --disableFastRender --bind 0.0.0.0 --bind 0.0.0.0 
 ```

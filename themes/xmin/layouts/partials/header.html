@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" data-theme="nord">
+<html lang="{{ .Site.LanguageCode }}" data-theme="winter">
   <head>
 
     {{ $googleAnalyticsID := .Site.Config.Services.GoogleAnalytics.ID }}
@@ -32,11 +32,10 @@
 
 
     <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <!-- <link rel="stylesheet" href="{{ "css/nord.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" /> -->
     <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
