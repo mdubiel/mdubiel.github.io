@@ -8,7 +8,7 @@ readTime: true
 autonumber: true
 showTags: true
 hideBackToTop: false
-draft: true
+draft: false
 tags: ["Django", "Hello World", "Web Development", "Python", "Tutorial", "Views", "Templates", "URL Routing"]
 commits: []
 prev_page: "/journal/initial-run"
