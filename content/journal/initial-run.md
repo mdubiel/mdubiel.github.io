@@ -12,6 +12,7 @@ draft: false
 tags: ["Django", "Tailwind CSS", "Docker", "PostgreSQL", "django-environ", "Python", "Web Development", "Setup", "Configuration", "Migrations"]
 commits: []
 prev_page: "/journal/django-app-folder"
+next_page: "/journal/hello-world"
 ---
 ## Initial run
 
